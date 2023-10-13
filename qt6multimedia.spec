@@ -4,10 +4,10 @@
 # Using build pattern: cmake
 #
 Name     : qt6multimedia
-Version  : 6.5.3
-Release  : 1
-URL      : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtmultimedia-everywhere-src-6.5.3.tar.xz
-Source0  : https://download.qt.io/official_releases/qt/6.5/6.5.3/submodules/qtmultimedia-everywhere-src-6.5.3.tar.xz
+Version  : 6.6.0
+Release  : 2
+URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtmultimedia-everywhere-src-6.6.0.tar.xz
+Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtmultimedia-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-2.1 LGPL-3.0 MPL-2.0 MPL-2.0-no-copyleft-exception
@@ -65,15 +65,15 @@ license components for the qt6multimedia package.
 
 
 %prep
-%setup -q -n qtmultimedia-everywhere-src-6.5.3
-cd %{_builddir}/qtmultimedia-everywhere-src-6.5.3
+%setup -q -n qtmultimedia-everywhere-src-6.6.0
+cd %{_builddir}/qtmultimedia-everywhere-src-6.6.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1696280712
+export SOURCE_DATE_EPOCH=1697206863
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -109,7 +109,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1696280712
+export SOURCE_DATE_EPOCH=1697206863
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6multimedia
 cp %{_builddir}/qtmultimedia-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6multimedia/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -144,49 +144,50 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qabstractvideobuffer_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qaudiodevice_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qaudioengine_pulse_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qaudiohelpers_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qaudiostatemachine_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qaudiostatemachineutils_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qaudiosystem_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qcamera_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qcameradevice_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qmediaplayer_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qmediarecorder_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qmediastoragelocation_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qmemoryvideobuffer_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qmultimediautils_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformaudiodecoder_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformaudioinput_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformaudiooutput_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformcamera_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformimagecapture_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediacapture_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediadevices_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediaformatinfo_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediaintegration_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediaplayer_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediaplugin_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformmediarecorder_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformsurfacecapture_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformvideodevices_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformvideosink_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qplatformvideosource_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qpulseaudiodevice_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qpulseaudiomediadevices_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qpulseaudiosink_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qpulseaudiosource_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qpulsehelpers_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qsamplecache_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qtmultimedia-config_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qtmultimediaglobal_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qvideoframeconversionhelper_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qvideoframeconverter_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qvideooutputorientationhandler_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qvideotexturehelper_p.h
-/usr/include/QtMultimedia/6.5.3/QtMultimedia/private/qvideowindow_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qabstractvideobuffer_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qaudiodevice_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qaudioengine_pulse_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qaudiohelpers_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qaudiostatemachine_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qaudiosystem_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qcamera_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qcameradevice_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qcapturablewindow_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qmediaplayer_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qmediarecorder_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qmediastoragelocation_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qmemoryvideobuffer_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qmultimediautils_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformaudiodecoder_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformaudioinput_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformaudiooutput_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformcamera_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformcapturablewindows_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformimagecapture_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediacapture_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediadevices_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediaformatinfo_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediaintegration_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediaplayer_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediaplugin_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformmediarecorder_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformsurfacecapture_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformvideodevices_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformvideosink_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qplatformvideosource_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qpulseaudiodevice_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qpulseaudiomediadevices_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qpulseaudiosink_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qpulseaudiosource_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qpulsehelpers_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qsamplecache_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qtmultimedia-config_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qtmultimediaglobal_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qvideoframeconversionhelper_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qvideoframeconverter_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qvideooutputorientationhandler_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qvideotexturehelper_p.h
+/usr/include/QtMultimedia/6.6.0/QtMultimedia/private/qvideowindow_p.h
 /usr/include/QtMultimedia/QAudio
 /usr/include/QtMultimedia/QAudioBuffer
 /usr/include/QtMultimedia/QAudioDecoder
@@ -200,6 +201,7 @@ popd
 /usr/include/QtMultimedia/QCamera
 /usr/include/QtMultimedia/QCameraDevice
 /usr/include/QtMultimedia/QCameraFormat
+/usr/include/QtMultimedia/QCapturableWindow
 /usr/include/QtMultimedia/QImageCapture
 /usr/include/QtMultimedia/QMediaCaptureSession
 /usr/include/QtMultimedia/QMediaDevices
@@ -214,6 +216,7 @@ popd
 /usr/include/QtMultimedia/QVideoFrameFormat
 /usr/include/QtMultimedia/QVideoSink
 /usr/include/QtMultimedia/QWaveDecoder
+/usr/include/QtMultimedia/QWindowCapture
 /usr/include/QtMultimedia/QtMultimedia
 /usr/include/QtMultimedia/QtMultimediaDepends
 /usr/include/QtMultimedia/QtMultimediaVersion
@@ -228,6 +231,7 @@ popd
 /usr/include/QtMultimedia/qaudiosource.h
 /usr/include/QtMultimedia/qcamera.h
 /usr/include/QtMultimedia/qcameradevice.h
+/usr/include/QtMultimedia/qcapturablewindow.h
 /usr/include/QtMultimedia/qimagecapture.h
 /usr/include/QtMultimedia/qmediacapturesession.h
 /usr/include/QtMultimedia/qmediadevices.h
@@ -248,7 +252,8 @@ popd
 /usr/include/QtMultimedia/qvideoframeformat.h
 /usr/include/QtMultimedia/qvideosink.h
 /usr/include/QtMultimedia/qwavedecoder.h
-/usr/include/QtMultimediaWidgets/6.5.3/QtMultimediaWidgets/private/qvideowidget_p.h
+/usr/include/QtMultimedia/qwindowcapture.h
+/usr/include/QtMultimediaWidgets/6.6.0/QtMultimediaWidgets/private/qvideowidget_p.h
 /usr/include/QtMultimediaWidgets/QGraphicsVideoItem
 /usr/include/QtMultimediaWidgets/QVideoWidget
 /usr/include/QtMultimediaWidgets/QtMultimediaWidgets
@@ -260,11 +265,11 @@ popd
 /usr/include/QtMultimediaWidgets/qtmultimediawidgetsglobal.h
 /usr/include/QtMultimediaWidgets/qtmultimediawidgetsversion.h
 /usr/include/QtMultimediaWidgets/qvideowidget.h
-/usr/include/QtSpatialAudio/6.5.3/QtSpatialAudio/private/qambisonicdecoder_p.h
-/usr/include/QtSpatialAudio/6.5.3/QtSpatialAudio/private/qambisonicdecoderdata_p.h
-/usr/include/QtSpatialAudio/6.5.3/QtSpatialAudio/private/qaudioengine_p.h
-/usr/include/QtSpatialAudio/6.5.3/QtSpatialAudio/private/qaudioroom_p.h
-/usr/include/QtSpatialAudio/6.5.3/QtSpatialAudio/private/qtspatialaudioglobal_p.h
+/usr/include/QtSpatialAudio/6.6.0/QtSpatialAudio/private/qambisonicdecoder_p.h
+/usr/include/QtSpatialAudio/6.6.0/QtSpatialAudio/private/qambisonicdecoderdata_p.h
+/usr/include/QtSpatialAudio/6.6.0/QtSpatialAudio/private/qaudioengine_p.h
+/usr/include/QtSpatialAudio/6.6.0/QtSpatialAudio/private/qaudioroom_p.h
+/usr/include/QtSpatialAudio/6.6.0/QtSpatialAudio/private/qtspatialaudioglobal_p.h
 /usr/include/QtSpatialAudio/QAmbientSound
 /usr/include/QtSpatialAudio/QAudioEngine
 /usr/include/QtSpatialAudio/QAudioListener
@@ -336,11 +341,11 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libQt6Multimedia.so.6
-/usr/lib64/libQt6Multimedia.so.6.5.3
+/usr/lib64/libQt6Multimedia.so.6.6.0
 /usr/lib64/libQt6MultimediaWidgets.so.6
-/usr/lib64/libQt6MultimediaWidgets.so.6.5.3
+/usr/lib64/libQt6MultimediaWidgets.so.6.6.0
 /usr/lib64/libQt6SpatialAudio.so.6
-/usr/lib64/libQt6SpatialAudio.so.6.5.3
+/usr/lib64/libQt6SpatialAudio.so.6.6.0
 
 %files license
 %defattr(0644,root,root,0755)
