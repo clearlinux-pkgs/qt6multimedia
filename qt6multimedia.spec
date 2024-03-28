@@ -7,7 +7,7 @@
 #
 Name     : qt6multimedia
 Version  : 6.6.3
-Release  : 15
+Release  : 16
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtmultimedia-everywhere-src-6.6.3.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtmultimedia-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
@@ -24,6 +24,7 @@ BuildRequires : glibc-dev
 BuildRequires : pkg-config
 BuildRequires : pkgconfig(gobject-2.0)
 BuildRequires : qt6base-dev
+BuildRequires : qt6declarative-dev
 BuildRequires : qt6shadertools-dev
 BuildRequires : qtbase-dev
 # Suppress stripping binaries
@@ -71,7 +72,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711492686
+export SOURCE_DATE_EPOCH=1711651361
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -132,7 +133,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711492686
+export SOURCE_DATE_EPOCH=1711651361
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6multimedia
 cp %{_builddir}/qtmultimedia-everywhere-src-%{version}/LICENSES/BSD-2-Clause.txt %{buildroot}/usr/share/package-licenses/qt6multimedia/07c1ab270255cf247438e2358ff0c18835b6a6ce || :
@@ -282,6 +283,21 @@ popd
 /usr/include/QtMultimedia/qvideosink.h
 /usr/include/QtMultimedia/qwavedecoder.h
 /usr/include/QtMultimedia/qwindowcapture.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qquickimagecapture_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qquickimagepreviewprovider_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qquickmediaplayer_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qquickscreencapture_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qquicksoundeffect_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qquickvideooutput_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qsgvideonode_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qsgvideotexture_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qtmultimediaquickglobal_p.h
+/usr/include/QtMultimediaQuick/6.6.3/QtMultimediaQuick/private/qtmultimediaquicktypes_p.h
+/usr/include/QtMultimediaQuick/QtMultimediaQuick
+/usr/include/QtMultimediaQuick/QtMultimediaQuickDepends
+/usr/include/QtMultimediaQuick/QtMultimediaQuickVersion
+/usr/include/QtMultimediaQuick/qtmultimediaquickexports.h
+/usr/include/QtMultimediaQuick/qtmultimediaquickversion.h
 /usr/include/QtMultimediaWidgets/6.6.3/QtMultimediaWidgets/private/qvideowidget_p.h
 /usr/include/QtMultimediaWidgets/QGraphicsVideoItem
 /usr/include/QtMultimediaWidgets/QVideoWidget
@@ -342,6 +358,14 @@ popd
 /usr/lib64/cmake/Qt6Multimedia/Qt6MultimediaTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6Multimedia/Qt6MultimediaTargets.cmake
 /usr/lib64/cmake/Qt6Multimedia/Qt6MultimediaVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfig.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersion.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateDependencies.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateTargets.cmake
+/usr/lib64/cmake/Qt6MultimediaQuickPrivate/Qt6MultimediaQuickPrivateVersionlessTargets.cmake
 /usr/lib64/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfig.cmake
 /usr/lib64/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsConfigVersion.cmake
@@ -350,6 +374,12 @@ popd
 /usr/lib64/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets-relwithdebinfo.cmake
 /usr/lib64/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsTargets.cmake
 /usr/lib64/cmake/Qt6MultimediaWidgets/Qt6MultimediaWidgetsVersionlessTargets.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaAdditionalTargetInfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfig.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfigVersion.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaConfigVersionImpl.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets-relwithdebinfo.cmake
+/usr/lib64/cmake/Qt6Qml/QmlPlugins/Qt6quickmultimediaTargets.cmake
 /usr/lib64/cmake/Qt6SpatialAudio/Qt6SpatialAudioAdditionalTargetInfo.cmake
 /usr/lib64/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfig.cmake
 /usr/lib64/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfigVersion.cmake
@@ -360,6 +390,8 @@ popd
 /usr/lib64/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake
 /usr/lib64/libQt6Multimedia.prl
 /usr/lib64/libQt6Multimedia.so
+/usr/lib64/libQt6MultimediaQuick.prl
+/usr/lib64/libQt6MultimediaQuick.so
 /usr/lib64/libQt6MultimediaWidgets.prl
 /usr/lib64/libQt6MultimediaWidgets.so
 /usr/lib64/libQt6SpatialAudio.prl
@@ -369,6 +401,7 @@ popd
 /usr/lib64/pkgconfig/Qt6SpatialAudio.pc
 /usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_multimedia_private.pri
+/usr/lib64/qt6/mkspecs/modules/qt_lib_multimediaquick_private.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_multimediawidgets_private.pri
 /usr/lib64/qt6/mkspecs/modules/qt_lib_spatialaudio.pri
@@ -377,20 +410,30 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /V3/usr/lib64/libQt6Multimedia.so.6.6.3
+/V3/usr/lib64/libQt6MultimediaQuick.so.6.6.3
 /V3/usr/lib64/libQt6MultimediaWidgets.so.6.6.3
 /V3/usr/lib64/libQt6SpatialAudio.so.6.6.3
+/V3/usr/lib64/qt6/qml/QtMultimedia/libquickmultimediaplugin.so
 /usr/lib64/libQt6Multimedia.so.6
 /usr/lib64/libQt6Multimedia.so.6.6.3
+/usr/lib64/libQt6MultimediaQuick.so.6
+/usr/lib64/libQt6MultimediaQuick.so.6.6.3
 /usr/lib64/libQt6MultimediaWidgets.so.6
 /usr/lib64/libQt6MultimediaWidgets.so.6.6.3
 /usr/lib64/libQt6SpatialAudio.so.6
 /usr/lib64/libQt6SpatialAudio.so.6.6.3
 /usr/lib64/qt6/metatypes/qt6multimedia_relwithdebinfo_metatypes.json
+/usr/lib64/qt6/metatypes/qt6multimediaquickprivate_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6multimediawidgets_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6spatialaudio_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/modules/Multimedia.json
+/usr/lib64/qt6/modules/MultimediaQuickPrivate.json
 /usr/lib64/qt6/modules/MultimediaWidgets.json
 /usr/lib64/qt6/modules/SpatialAudio.json
+/usr/lib64/qt6/qml/QtMultimedia/Video.qml
+/usr/lib64/qt6/qml/QtMultimedia/libquickmultimediaplugin.so
+/usr/lib64/qt6/qml/QtMultimedia/plugins.qmltypes
+/usr/lib64/qt6/qml/QtMultimedia/qmldir
 
 %files license
 %defattr(0644,root,root,0755)
