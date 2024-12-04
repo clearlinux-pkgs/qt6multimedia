@@ -7,7 +7,7 @@
 #
 Name     : qt6multimedia
 Version  : 6.8.0
-Release  : 23
+Release  : 24
 URL      : https://download.qt.io/official_releases/qt/6.8/6.8.0/submodules/qtmultimedia-everywhere-src-6.8.0.zip
 Source0  : https://download.qt.io/official_releases/qt/6.8/6.8.0/submodules/qtmultimedia-everywhere-src-6.8.0.zip
 Summary  : No detailed summary available
